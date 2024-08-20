@@ -15,7 +15,7 @@
 | --- | --- | --- |
 | CPU | Intel Core W-10885M | ✅ Working |
 | RAM | DDR4 32GB | ✅ Working |
-| Audio | Realtek ALC711 | | ❌ Not Working |
+| Audio | Realtek ALC711 | ❌ Not Working |
 | WiFi | Killer 1675 (AX201) | ✅ Working |
 | Bluetooth | AX201 Wi-Fi 5 | ✅ Working |
 | SSD | Crucial P3 2TB | ✅ Working |
