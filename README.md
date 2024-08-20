@@ -4,9 +4,9 @@
 
 # Details
 
-| OpenCore Version | 1.0.0 |
+| OpenCore Version | 1.0.1 |
 | --- | --- |
-| macOS Version | 13.6.7 (Ventura) |
+| macOS Version | 13.6.9 (Ventura) |
 | SMBios | MacBookAir9,1 |
 
 # Hardware Specifications
@@ -23,7 +23,7 @@
 | Trackpad | I2C Connection | ✅ Working |
 | Webcam | Microdia RGB IR HD camera | ✅ Working |
 | MicroSD Card | RTS5260 Card Reader | ✅ Working |
-| Fingerprint Sensor | Shenzen Goodix | 🔶 Partially working |
+| Fingerprint Sensor | Shenzen Goodix | ❌ Not Working |
 | S4 | Hibernate/Wake | ✅ Working |
 | GPU | Intel HD630 Graphics | ✅ Working |
 | eGPU | AMD Sapphire Radeon RX6950XT | ✅ Working |
@@ -72,22 +72,11 @@ sudo pmset -a powernap 1
 sudo pmset -a sleep 1
 sudo pmset -a standbydelaylow 1
 sudo pmset -a standbydelayhigh 1
+sudo pmset -a womp 0
+sudo pmset -a proximitywake 0
 ```
-
-# finalise_config.sh
-This bash script can be run to setup the Platform info like serial, model 
-etc in an automated matter.
-It will update the config.plist in EFI/OC/ and makes a copy ( will be 
-overwritten next run).
-
-The config.plist has a construct with min and maxkernel to support Sonoma 
-and the script detects the OS version to modify certain parameters and 
-sets OpenCore to boot graphically.
-
-The script relies on the current config.plist and may not work as expected 
-on other versions of the file or on other OS versions.
 
 # Known Issues
 
-- None as far as I know...
+None as far as I know...
 
